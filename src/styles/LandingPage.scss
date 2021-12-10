@@ -1,0 +1,367 @@
+@import "./variables.scss";
+@import"./mixins.scss";
+
+#sectionOne {
+    flex-direction: column;
+    gap: 60px;
+    & .top {
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+
+        @include tablet { 
+            flex-direction: column; 
+        }
+
+        & .flexStart {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            @include tablet { 
+                align-self: center;
+            }
+        }
+    
+        & .flexEnd {
+            flex: 1;
+            max-width: 100%;
+            @include tablet { 
+                align-self: center;
+            }
+        }
+    }
+
+    & .bot {
+        & .sectOneLogos {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-content: center;
+            width: 80%;
+            margin: auto;
+            list-style: none;
+
+            @include tablet { 
+                width: 100%;
+                justify-content: space-between;
+            }
+
+            @include mobile { 
+                row-gap: 2rem;
+                flex-wrap: wrap;
+                justify-content: space-around;
+                margin-bottom: 5rem;
+            }
+
+            & li {
+                display: flex;
+                align-content: center;
+
+                & a {
+                    display: flex;
+                    align-content: center;
+                }
+            }
+        }
+    }
+
+    
+}
+
+#sectionTwo, #sectionThree, #sectionFour {
+    flex-direction: row;
+    gap: 10rem;
+    align-items: center;
+
+    @include tablet { 
+        gap: 5rem;
+    }
+}
+
+#sectionTwo {
+    @include tablet { 
+        flex-direction: column-reverse;
+    }
+
+    & .flexStart {
+        @include tablet { 
+            align-self: center;
+        }
+    }
+}
+
+#sectionThree {
+    @include tablet { 
+        flex-direction: column;
+    }
+
+    & .flexEnd {
+        @include tablet { 
+            align-self: center;
+        }
+    }
+}
+
+#sectionFour {
+    @include tablet {
+        flex-direction: column-reverse;
+    }
+
+    & .flexStart {
+        @include tablet { 
+            align-self: center;
+        }
+    }
+}
+
+#sectionFive {
+    text-align: center;
+    flex-direction: column;
+    
+    & .plansHolder {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin: auto;
+
+        @include tablet { 
+            flex-direction: column;
+            justify-content: stretch;
+            gap: 3rem;
+            margin: 0;
+        }
+
+        &:nth-child(2){
+            margin-top: 3rem;
+        }
+
+        & .planCard {
+            width: 300px;
+            padding: 88px 70px 88px 70px;
+            box-sizing: border-box;
+
+            @include tablet { 
+                width: 100%;
+            }
+        }
+
+        & .planCardWhite {
+            background-color: rgba(236, 235, 255, 0.6); 
+        }
+
+        & .cardTitle {
+            font-size: 20px;
+            color: $neutral300;
+        } 
+        
+        & .cardPrice {
+            font-size: 40px;
+        }
+
+        & .featureList {
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+            & li {
+                line-height: 34px;
+                font-size: 18px;
+                color: $neutral300;
+            }
+        }
+
+        & .planCardPurple {
+            background-color: $primary;
+
+            & .cardTitle {
+                color: white;
+            } 
+            
+            & .cardPrice {
+                color: white;
+            }
+    
+            & .featureList {
+                & li {
+                    color: white;
+                }
+            }
+        }
+    }
+}
+
+#sectionSix {
+    flex-direction: column;
+
+    & .top {
+        margin-top: 10rem;
+        margin-bottom: 5rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        @include tablet { 
+            margin-top: 3rem;
+            margin-bottom: 2rem;
+        }
+
+    }
+
+    & .bot {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+
+        @include tablet { 
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        & .thumbCard {
+            max-width: 360px;
+
+            @include tablet { 
+                display: flex;
+                flex-direction: row;
+                gap: 1rem;
+                max-width: 100%;
+            }
+
+            @include mobile { 
+                flex-direction: column;
+            }
+
+            & > div {
+                @include tablet { 
+                    flex: 1;
+                }
+            }
+
+            & .thumbTitle {
+                margin-top: 0;
+                font-size: 22px;
+                color: $neutral500;
+                margin-bottom: 0;
+            }
+
+            & .excerpt {
+                margin-top: 10px;
+                font-size: 16px;
+                line-height: 26px;
+            }
+        }
+    }
+}
+
+#sectionSeven {
+    height: 100vh;
+    flex-direction: column;
+
+    @include tablet { 
+        padding: 0;
+        height: 80vh;
+    }
+
+    @include mobile { 
+        padding: 0;
+        height: 100vh;
+    }
+
+
+    & .interestedIn {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 70%;
+        box-sizing: border-box;
+        height: 300px;
+        margin: 0 auto;
+        background-color: $neutral500;
+        margin-top: calc(40vh - 200px);
+        padding: 20px 50px 20px 50px;
+
+        @include tablet { 
+            width: 100%;
+            margin: 0;
+        }
+
+        @include mobile { 
+            margin-top: 5rem;
+            flex-direction: column;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        & h1 {
+            color: white;
+
+            @include mobile { 
+                text-align: center;
+            }
+        }
+    }
+
+
+    & .footer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin-top: 2rem;
+
+        @include mobile { 
+            padding: 20px 20px 20px 20px;
+            row-gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        & .listHolder {
+            @include mobile { 
+                flex-basis: 50%;
+            }
+        }
+
+        & .containsIcons {
+            display: flex;
+            flex-direction: row;
+            gap: 1rem;
+        }
+    }
+}
+
+.footerBackground {
+    z-index: -1;
+    height: 70vh;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(236, 235, 255, 0.6); 
+
+    & .logoAndCopyrightHolder {
+        position: relative;
+        height: 100%;
+        width: 100%;
+
+        & .logoAndCopyright {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            box-sizing: border-box;
+            padding: 0 100px 50px 100px;
+            justify-content: space-between;
+
+            @include tablet { 
+                padding: 40px 40px 40px 40px;
+            }
+
+            @include mobile { 
+                padding: 20px 20px 20px 20px;
+            }
+        }
+    }
+}

@@ -1,0 +1,64 @@
+@import "./variables.scss";
+@import"./mixins.scss";
+
+#navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+
+    @include tablet { 
+        justify-content: space-between;
+        padding: 40px 40px 40px 40px;
+    }
+
+    @include mobile { 
+        padding: 20px 20px 20px 20px;
+    }
+
+    & .navLinks {
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+        justify-content: space-evenly;
+        gap: 2rem;
+
+        @include tablet { 
+            display: none; 
+        }
+
+        & li {
+            & a {
+                padding: 10px;
+                text-decoration: none;
+                font-weight: bold;
+                color: $neutral300;
+                transition: 0.5s;
+                border-bottom: 2px solid rgba(255, 255, 255, 0);
+    
+                &:hover {
+                    color: $neutral500;
+                    border-bottom: 2px solid $primary;
+                }
+            }
+        }
+    }
+
+    & .buttons {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+
+        @include tablet { 
+            display: none; 
+        }
+    }
+
+    & .burgerMenu {
+        display: none;
+
+        @include tablet { 
+            display: block; 
+        }
+    }
+}

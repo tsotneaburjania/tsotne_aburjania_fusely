@@ -1,0 +1,20 @@
+@import "./variables.scss";
+
+.buttonPurple {
+    outline: none;
+    background-color: $primary;
+    padding: 16px 30px 16px 30px;
+    border: 1px solid $primary;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 19px;
+    transition: 0.4s;
+    width: 140px;
+    max-width: 140px;
+
+    &:hover {
+        background-color: white;
+        color: $primary;
+    }
+}

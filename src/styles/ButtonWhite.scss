@@ -1,0 +1,20 @@
+@import "./variables.scss";
+
+.buttonWhite {
+    outline: none;
+    background-color: white;
+    padding: 10px 20px 10px 20px;
+    border: 1px solid $primary;
+    color: $primary;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 19px;
+    transition: 0.4s;
+    width: 140px;
+    max-width: 140px;
+
+    &:hover {
+        background-color: $primary;
+        color: white;
+    }
+}

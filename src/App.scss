@@ -1,0 +1,81 @@
+@import "./styles/variables.scss";
+@import"./styles/mixins.scss";
+
+a {
+    text-decoration: none;
+    color: $neutral500;
+}
+
+img {
+    max-width: 100%;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+.section {
+    padding: 100px 100px 0px 100px;
+    display: flex;
+
+    @include tablet { 
+        padding: 40px 40px 40px 40px;
+    }
+    @include mobile { 
+        padding: 10px 20px 10px 20px;
+    }
+}
+
+.titleBig {
+    font-size: 85px;
+
+    @include mobile { 
+        font-size: 46px;
+        width: 100%;
+    }
+}
+
+.titleMedium {
+    font-size: 70px;
+
+    @include mobile { 
+        font-size: 34px;
+        width: 100%;
+    }
+}
+        
+.paragraph {
+    font-size: 20px;
+    line-height: 34px;
+    width: 80%;
+
+    @include mobile { 
+        font-size: 20px;
+        width: 100%;
+    }
+}
+.App {
+    padding: 40px 80px 40px 80px;
+    margin: auto;
+    font-family: "Open Sans";
+    position:relative;
+
+    @include tablet {
+        padding: 0;
+    }
+
+    & p {
+        color: $neutral300;
+    }
+
+    & h1, h2, h3 {
+        color: $neutral500;
+        margin: 0;
+    }
+
+    & .pageHolder {
+        max-width: 1440px;
+        margin: auto;
+    }
+}
